@@ -21,4 +21,14 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Sqlite3\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Sqlite3\SqlitePathDestination.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

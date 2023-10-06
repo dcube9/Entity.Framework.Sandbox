@@ -1,11 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-
-using EntityFramework.V70.Relationships;
 using Microsoft.EntityFrameworkCore;
 
 Console.WriteLine("Hello, EntityFramework 7.0 Relationships Samples");
 
+using (var context = new EntityFramework.V70.Relationships.OneToOneRequired.BlogContext0()) { CreateDatabase(context); }
+using (var context = new EntityFramework.V70.Relationships.OneToOneRequired.BlogContext1()) { CreateDatabase(context); }
+using (var context = new EntityFramework.V70.Relationships.OneToOneRequired.BlogContext2()) { CreateDatabase(context); }
+
+using (var context = new EntityFramework.V70.Relationships.OneToOneOptional.BlogContext0()) { CreateDatabase(context); }
+using (var context = new EntityFramework.V70.Relationships.OneToOneOptional.BlogContext1()) { CreateDatabase(context); }
+using (var context = new EntityFramework.V70.Relationships.OneToOneOptional.BlogContext2()) { CreateDatabase(context); }
+
+/*
 using (var context = new OneToOne.Required.BlogContext0()) { CreateDatabase(context); }
 using (var context = new OneToOne.Required.BlogContext1()) { CreateDatabase(context); }
 using (var context = new OneToOne.Required.BlogContext2()) { CreateDatabase(context); }
@@ -112,15 +118,14 @@ using (var context = new OneToOne.SelfReferencing.PersonContext1()) { CreateData
 using (var context = new OneToOne.RequiredWithoutCascadeDelete.BlogContext0()) { CreateDatabase(context); }
 using (var context = new OneToOne.RequiredWithoutCascadeDelete.BlogContext1()) { CreateDatabase(context); }
 using (var context = new OneToOne.RequiredWithoutCascadeDelete.BlogContext2()) { CreateDatabase(context); }
+*/
 
 //
 // Con la migrazione preparata crea anche le tabelle del DB
 // 
 //using (var context = new BlogContext()) { CreateDatabase(context); }
 
-
 Console.WriteLine("Ended");
-
 
 static void CreateDatabase(DbContext context)
 {
