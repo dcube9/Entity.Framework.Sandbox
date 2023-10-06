@@ -39,15 +39,6 @@ public class OneToOne
         }
         #endregion
 
-        public class BlogContext33 : DbContext
-        {
-            public DbSet<Blog> Blogs => Set<Blog>();
-            public DbSet<BlogHeader> BlogHeaders => Set<BlogHeader>();
-
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-                => optionsBuilder.UseSqlite($"DataSource = ./Sqlite3/Required{GetType().Name}.db");
-        }
-
         public class BlogContext0 : DbContext
         {
             public DbSet<Blog> Blogs => Set<Blog>();
